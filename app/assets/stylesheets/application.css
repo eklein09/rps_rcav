@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+ .game_alert{
+  color: white;
+  font-weight: bold;
+}

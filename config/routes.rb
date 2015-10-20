@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  get("/rock", {:controller => "game", :action => "rock"})
+  get("/paper", {:controller => "game", :action => "paper"})
+  get("/scissors", {:controller => "game", :action => "scissors"})
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
