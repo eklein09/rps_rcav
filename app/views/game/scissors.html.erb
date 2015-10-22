@@ -5,17 +5,18 @@
   <hr class="featurette-divider">
 
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-offset-2 col-sm-8">
 
      <div class="btn-group btn-group-justified" role="group" aria-label="...">
       <div class="btn-group" role="group">
-      <button type="button" class="btn btn-primary">Play Rock</button>
+      <!-- <button type="button" class="btn btn-primary">Play Rock</button> -->
+      <a class="btn btn-primary" href="/rock" role="button">Play Rock</a>
       </div>
       <div class="btn-group" role="group">
-        <button type="button" class="btn btn-info">Play Paper</button>
+        <a class="btn btn-info" href="/paper" role="button">Play Paper</a>
       </div>
       <div class="btn-group" role="group">
-        <button type="button" class="btn btn-primary">Play Scissors</button>
+        <a class="btn btn-primary" href="/scissors" role="button">Play Scissors</a>
       </div>
     </div>
   </div>
@@ -29,7 +30,7 @@
 
     <div class="panel panel-success">
       <div class="panel-heading">
-        <h3 class="panel-title">Scissors</h3>
+        <h3 class="panel-title text-center">Scissors</h3>
       </div>
       <div class="panel-body">
         <img src="/assets/images/scissors.png" class="img-responsive" alt="scissors_image">
@@ -41,7 +42,7 @@
 
     <div class="panel panel-danger">
       <div class="panel-heading">
-        <h3 class="panel-title"><%= @computer_move.capitalize %></h3>
+        <h3 class="panel-title text-center"><%= @computer_move.capitalize %></h3>
       </div>
       <div class="panel-body">
         <img src=<%="/assets/images/#{@computer_move}.png" %> class="img-responsive" alt="scissors_image">
@@ -51,8 +52,6 @@
   </div>
 
 </div>
-
-<hr class="featurette-divider">
 
 <div class="row">
 

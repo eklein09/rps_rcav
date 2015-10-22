@@ -1,20 +1,92 @@
+
+
 <div class="container">
-    <div class="row">
-        <div class="col-sm-4"></div>
-        <div class="col-sm-4"></div>
-        <div class="col-sm-4"></div>
+
+  <hr class="featurette-divider">
+
+  <div class="row">
+    <div class="col-sm-offset-2 col-sm-8">
+
+     <div class="btn-group btn-group-justified" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+      <!-- <button type="button" class="btn btn-primary">Play Rock</button> -->
+      <a class="btn btn-primary" href="/rock" role="button">Play Rock</a>
+      </div>
+      <div class="btn-group" role="group">
+        <a class="btn btn-info" href="/paper" role="button">Play Paper</a>
+      </div>
+      <div class="btn-group" role="group">
+        <a class="btn btn-primary" href="/scissors" role="button">Play Scissors</a>
+      </div>
     </div>
-    <div class="row">
-        <div class="col-sm-6"></div>
-        <div class="col-sm-6"></div>
-        <div class="col-sm-offset-4 col-sm-4"></div>
-    </div>
+  </div>
+
 </div>
 
-<h1> You chose Rock </h1>
+<hr class="featurette-divider">
 
-The computer chose <%= @computer_move %>
+<div class="row">
+  <div class="col-sm-offset-2 col-sm-4">
 
-<%= @message %>
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h3 class="panel-title text-center">Rock</h3>
+      </div>
+      <div class="panel-body">
+        <img src="/assets/images/rock.png" class="img-responsive" alt="scissors_image">
+      </div>
+    </div>
 
-<span class="label label-success">Success</span>
+  </div>
+  <div class="col-sm-4">
+
+    <div class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title text-center"><%= @computer_move.capitalize %></h3>
+      </div>
+      <div class="panel-body">
+        <img src=<%="/assets/images/#{@computer_move}.png" %> class="img-responsive" alt="scissors_image">
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="col-sm-offset-2 col-sm-8">
+    <div class="well">
+
+      <!-- Insert button here -->
+
+      <% if @result=="win" %>
+      <!-- # win alert -->
+      <div class="col-sm-offset-5">
+        <h1><span class="label label-success">You won!</span></h1>
+      </div>
+
+      <% elsif @result=="lose" %>
+      <!-- # lose alert -->
+      <div class="col-sm-offset-5">
+        <h1><span class="label label-danger">You lost!</span></h1>
+      </div>
+
+      <% else%>
+      <!-- #tie alert -->
+      <div class="col-sm-offset-5">
+        <h1><span class="label label-warning">You tied!</span></h1>
+      </div>
+
+      <% end %>
+
+    </div>
+
+  </div>
+
+
+</div>
+
+</div>
+
+
