@@ -3,7 +3,7 @@ class GameController < ApplicationController
   def playRPS(user_move)
     @computer_move = ["rock", "paper", "scissors"].sample
     @user_move = user_move
-    if user_move == @computer_move
+    if @user_move == @computer_move
       return "tie"
     elsif user_move == "paper" && @computer_move == "rock"
       return "win"
